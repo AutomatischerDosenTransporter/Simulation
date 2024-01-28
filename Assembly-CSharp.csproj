@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\VirtualLidar.cs" />
     <Compile Include="Assets\RosMessages\Adt\srv\PositionServiceResponse.cs" />
+    <Compile Include="Assets\Scripts\VirtualIMU.cs" />
     <Compile Include="Assets\RosMessages\Adt\msg\UnityColorMsg.cs" />
     <Compile Include="Assets\Scripts\TestSubscriber.cs" />
     <Compile Include="Assets\RosMessages\Adt\msg\ChatMsg.cs" />
@@ -63,13 +64,15 @@
     <Compile Include="Assets\RosMessages\Adt\msg\PosRotMsg.cs" />
     <Compile Include="Assets\RosMessages\Adt\msg\LaserScanMsg.cs" />
     <Compile Include="Assets\Scripts\VirtualTransform.cs" />
-    <Compile Include="Assets\RosMessages\Adt\srv\ObjectPoseServiceRequest.cs" />
     <Compile Include="Assets\Scripts\VirtualRange.cs" />
-    <Compile Include="Assets\Scripts\VirtualIMU.cs" />
+    <Compile Include="Assets\RosMessages\Adt\srv\ObjectPoseServiceRequest.cs" />
+    <Compile Include="Assets\Scripts\WheelControl.cs" />
+    <Compile Include="Assets\Scripts\CarControl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\adt_msgs\CMakeLists.txt" />
      <None Include="Assets\adt_msgs\package.xml" />
+     <None Include="Assets\Shaders\TileableShader.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Program Files\Unity\2020.2.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -699,6 +702,24 @@
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -17,6 +17,7 @@ public class VirtualLidar : MonoBehaviour
 
     public float minRange = 00.1f;
     public float maxRange = 10.0f;
+    public int scanPoints = 360;
 
     public bool showRaycastsMissed = false;
     public bool showRaycastsHit = false;
@@ -40,15 +41,16 @@ public class VirtualLidar : MonoBehaviour
 
 
     int layerMask = ~(1 << 8);
-    float[] distance = new float[360];
 
     private void FixedUpdate()
     {
-        for (int i = 0; i < 360; i++)
+        float[] distance = new float[scanPoints];
+
+        for (int i = 0; i < scanPoints; i++)
         {
             int index = i;
-            if(reverseData) index = 359 - index;
-            sensor.transform.Rotate(new Vector3(0,1,0),Space.Self);
+            if(reverseData) index = scanPoints-1 - index;
+            sensor.transform.Rotate(new Vector3(0,360f/scanPoints, 0),Space.Self);
 
             RaycastHit hit;
             if (Physics.Raycast(sensor.transform.position, sensor.transform.forward, out hit, maxRange, layerMask))
@@ -88,9 +90,9 @@ public class VirtualLidar : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Vector3 oldPos = Vector3.zero;
-        for(int i = 0; i < 360; i++)
+        for(int i = 0; i < scanPoints; i++)
         {
-            sensor.transform.Rotate(new Vector3(0, 1, 0), Space.Self);
+            sensor.transform.Rotate(new Vector3(0, 360f/ scanPoints, 0), Space.Self);
 
             Vector3 newPos = sensor.transform.forward;
             if(oldPos != Vector3.zero)

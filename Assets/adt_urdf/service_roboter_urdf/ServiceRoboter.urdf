@@ -38,6 +38,12 @@
         <cylinder length="0.04" radius="0.05" />
       </geometry>
     </visual>
+    <collision>
+      <origin xyz="0 0 0.02" />
+      <geometry>
+        <cylinder length="0.04" radius="0.05" />
+      </geometry>
+    </collision>
   </link>
   <link name="wheel_base">
     <inertial>
@@ -146,10 +152,143 @@
       </geometry>
     </collision>
   </link>
-  <joint name="ServiceRoboter_base_link_joint" type="fixed">
-    <parent link="ServiceRoboter" />
-    <child link="base_link" />
-  </joint>
+  <link name="uss_base">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
+  <link name="uss_front">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
+  <link name="sensor_front_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_front_2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_front_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="uss_left">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
+  <link name="sensor_left_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_left_2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_left_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="uss_right">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
+  <link name="sensor_right_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0.28 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_right_2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_right_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
   <joint name="base_link_barrel_joint" type="fixed">
     <parent link="base_link" />
     <child link="barrel" />
@@ -191,7 +330,6 @@
   <joint name="wheel_left_axis_wheel_left_joint" type="revolute">
     <parent link="wheel_left_axis" />
     <child link="wheel_left" />
-    <axis xyz="1 0 0" />
     <dynamics damping="0.0500000007450581" friction="0.0500000007450581" />
     <limit lower="0" upper="0" effort="3.40282346638529E+38" velocity="7" />
   </joint>
@@ -203,8 +341,70 @@
   <joint name="wheel_right_axis_wheel_right_joint" type="revolute">
     <parent link="wheel_right_axis" />
     <child link="wheel_right" />
-    <axis xyz="1 0 0" />
     <dynamics damping="0.0500000007450581" friction="0.0500000007450581" />
     <limit lower="0" upper="0" effort="3.40282346638529E+38" velocity="7" />
+  </joint>
+  <joint name="barrel_uss_base_joint" type="fixed">
+    <origin xyz="0 0 0.8" />
+    <parent link="barrel" />
+    <child link="uss_base" />
+  </joint>
+  <joint name="uss_base_front_joint" type="fixed">
+    <parent link="uss_base" />
+    <child link="uss_front" />
+  </joint>
+  <joint name="front_sensor_1_joint" type="fixed">
+    <origin xyz="0.28 0 0" />
+    <parent link="uss_front" />
+    <child link="sensor_front_1" />
+  </joint>
+  <joint name="front_sensor_2_joint" type="fixed">
+    <origin xyz="0.28 0 -0.3" />
+    <parent link="uss_front" />
+    <child link="sensor_front_2" />
+  </joint>
+  <joint name="front_sensor_3_joint" type="fixed">
+    <origin xyz="0.28 0 -0.6" />
+    <parent link="uss_front" />
+    <child link="sensor_front_3" />
+  </joint>
+  <joint name="uss_base_left_joint" type="fixed">
+    <origin rpy="0 0 -5.934119" />
+    <parent link="uss_base" />
+    <child link="uss_left" />
+  </joint>
+  <joint name="left_sensor_1_joint" type="fixed">
+    <origin xyz="0.28 0 0" />
+    <parent link="uss_left" />
+    <child link="sensor_left_1" />
+  </joint>
+  <joint name="left_sensor_2_joint" type="fixed">
+    <origin xyz="0.28 0 -0.3" />
+    <parent link="uss_left" />
+    <child link="sensor_left_2" />
+  </joint>
+  <joint name="left_sensor_3_joint" type="fixed">
+    <origin xyz="0.28 0 -0.6" />
+    <parent link="uss_left" />
+    <child link="sensor_left_3" />
+  </joint>
+  <joint name="uss_base_right_joint" type="fixed">
+    <origin rpy="0 0 -0.349066" />
+    <parent link="uss_base" />
+    <child link="uss_right" />
+  </joint>
+  <joint name="right_sensor_1_joint" type="fixed">
+    <parent link="uss_right" />
+    <child link="sensor_right_1" />
+  </joint>
+  <joint name="right_sensor_2_joint" type="fixed">
+    <origin xyz="0.28 0 -0.3" />
+    <parent link="uss_right" />
+    <child link="sensor_right_2" />
+  </joint>
+  <joint name="right_sensor_3_joint" type="fixed">
+    <origin xyz="0.28 0 -0.6" />
+    <parent link="uss_right" />
+    <child link="sensor_right_3" />
   </joint>
 </robot>
