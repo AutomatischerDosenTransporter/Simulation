@@ -1,0 +1,84 @@
+version: '3.0'
+
+services:
+
+  # ros-listener:
+  #   image: registry.nussi.net/ros:foxy-desktop
+  #   container_name: ros-listener
+  #   restart: unless-stopped
+  #   command: ros2 run demo_nodes_cpp listener
+  #   networks:
+  #     - ros
+
+  # ros-talker:
+  #   image: registry.nussi.net/ros:foxy-desktop
+  #   container_name: ros-talker
+  #   restart: unless-stopped
+  #   command: ros2 run demo_nodes_cpp talker
+  #   networks:
+  #     - ros
+
+  ros-unity:
+    image: registry.nussi.net/ros:unity
+    container_name: ros-unity
+    restart: unless-stopped
+    command: >
+      /bin/bash -c "cd /home/dev_ws
+      && source install/setup.bash
+      && colcon build
+      && source install/setup.bash
+      && ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=0.0.0.0"
+    ports:
+      - 10000:10000
+    networks:
+      - ros
+
+  ros-foxglove-studio:
+    image: ghcr.io/foxglove/studio:latest
+    container_name: ros-foxglove-studio
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    networks:
+      - ros
+  
+
+  ros-foxglove-bridge:
+    image: registry.nussi.net/ros:foxglove-bridge
+    container_name: ros-foxglove-bridge
+    ports:
+      - 8765:8765
+    networks:
+      - ros
+  
+
+  # ros-static-transform:
+  #   image: registry.nussi.net/ros:foxy-desktop
+  #   container_name: ros-static-transform
+  #   command: ros2 run tf2_ros static_transform_publisher 0 0 0 0.0 0.0 0.0 odom base_link
+  #   networks:
+  #     - ros
+  
+  ros-robot-state:
+    image: registry.nussi.net/ros:foxy-desktop
+    container_name: ros-robot-state
+    command: ros2 run robot_state_publisher robot_state_publisher /urdf/service_roboter_urdf/ServiceRoboter.urdf --ros-args --log-level info -p publish_frequency:=50.0
+    networks:
+      - ros
+    volumes:
+      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
+  
+  ros-joint-state:
+    image: registry.nussi.net/ros:foxy-desktop
+    container_name: ros-joint-state
+    command: >
+      /bin/bash -c "apt update -y
+      && apt install ros-foxy-joint-state-publisher -y
+      && ros2 run joint_state_publisher joint_state_publisher --ros-args --log-level info"
+    networks:
+      - ros
+    volumes:
+      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
+
+networks:
+  ros:

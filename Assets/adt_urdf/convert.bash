@@ -1,0 +1,1 @@
+apt update -y; apt install ros-foxy-xacro -y; ros2 run xacro xacro -o /data/basis_roboter.urdf /data/basis_roboter.urdf.xacro; ros2 run xacro xacro -o /data/service_roboter.urdf /data/service_roboter.urdf.xacro;

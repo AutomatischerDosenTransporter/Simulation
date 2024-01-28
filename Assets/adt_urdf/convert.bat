@@ -1,0 +1,1 @@
+docker run -it --rm -v .:/data osrf/ros:foxy-desktop /bin/bash /data/convert.bash
