@@ -1,0 +1,276 @@
+{
+  "configById": {
+    "Plot!2sa8mh9": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/imu.angular_velocity.x",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/imu.angular_velocity.y",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/imu.angular_velocity.z",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/imu.linear_acceleration.x",
+          "enabled": false
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/imu.linear_acceleration.y",
+          "enabled": false
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/imu.linear_acceleration.z",
+          "enabled": false
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": false,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "followingViewWidth": 60
+    },
+    "3D!b55w73": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 23.327015599929773,
+        "phi": 10.385887541350392,
+        "thetaOffset": -159.01323042999164,
+        "targetOffset": [
+          0.12306809693881655,
+          0.014993308333129734,
+          -1.631435025641835e-16
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-none",
+      "followTf": "odom",
+      "scene": {
+        "transforms": {
+          "showLabel": false,
+          "axisScale": 0.607,
+          "enablePreloading": true
+        }
+      },
+      "transforms": {
+        "frame:odom": {
+          "visible": true
+        },
+        "frame:base_link": {
+          "visible": true
+        },
+        "frame:wheel_right": {
+          "rpyCoefficient": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "topics": {
+        "/lidar": {
+          "visible": true,
+          "colorField": "range",
+          "colorMode": "colormap",
+          "colorMap": "turbo",
+          "pointSize": 2.22,
+          "decayTime": 0
+        },
+        "/robot_description": {
+          "visible": true
+        }
+      },
+      "layers": {
+        "2a1a48b4-3dca-4e2a-b630-b0e651208e70": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "2a1a48b4-3dca-4e2a-b630-b0e651208e70",
+          "layerId": "foxglove.Grid",
+          "frameId": "odom",
+          "size": 20,
+          "divisions": 10,
+          "lineWidth": 1,
+          "color": "#248eff",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "order": 1
+        }
+      },
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {}
+    },
+    "Plot!a5uest": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_left_axis.position[:]",
+          "enabled": false
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_right_axis.position[:]",
+          "enabled": false
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_left_axis.velocity[:]",
+          "enabled": false
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_right_axis.velocity[:]",
+          "enabled": false
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_left_axis.effort[:]",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_right_axis.effort[:]",
+          "enabled": true
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "followingViewWidth": 5
+    },
+    "Tab!skyvss": {
+      "activeTabIdx": 3,
+      "tabs": [
+        {
+          "title": "1",
+          "layout": "Plot!2sa8mh9"
+        },
+        {
+          "title": "2",
+          "layout": "3D!b55w73"
+        },
+        {
+          "title": "3",
+          "layout": "Plot!a5uest"
+        },
+        {
+          "title": "4",
+          "layout": "Plot!1zji5mc"
+        }
+      ]
+    },
+    "Plot!1zji5mc": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/sensor_front_1.range",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/sensor_front_2.range",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/sensor_front_3.range",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/sensor_left_1.range",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/sensor_left_2.range",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/sensor_left_3.range",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/sensor_right_1.range",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/sensor_right_2.range",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/sensor_right_3.range",
+          "enabled": true
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "followingViewWidth": 10
+    }
+  },
+  "globalVariables": {
+    "globalVariable": 4
+  },
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": "Tab!skyvss"
+}

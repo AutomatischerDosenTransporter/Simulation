@@ -67,8 +67,9 @@
     <Compile Include="Assets\RosMessages\Adt\msg\LaserScanMsg.cs" />
     <Compile Include="Assets\Scripts\VirtualTransform.cs" />
     <Compile Include="Assets\Scripts\VirtualRange.cs" />
+    <Compile Include="Assets\Scripts\BasisRoboterTransformManager.cs" />
+    <Compile Include="Assets\Scripts\VirtualWheelJointState.cs" />
     <Compile Include="Assets\RosMessages\Adt\srv\ObjectPoseServiceRequest.cs" />
-    <Compile Include="Assets\VirtualWheelJointState.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\adt_msgs\CMakeLists.txt" />
