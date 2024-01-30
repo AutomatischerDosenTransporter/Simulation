@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" exec="robot_state_publisher" output="log" respawn="false" respawn_delay="0">
+        <!-- <remap from="/basis_roboter/joint_states" to="/joint_states"/> -->
+
+        <!-- <remap from="/robot_description" to="/basis_roboter/robot_description"/> -->
+        <!-- <remap from="/tf" to="/basis_roboter/tf"/> -->
+        <!-- <remap from="/tf_static" to="/basis_roboter/tf_static"/>  -->
+
+        <param name="publish_frequency" value="50.0"/>
+        <param name="frame_prefix" value="basis_roboter_"/>
+        <param name="robot_description" value="$(command 'cat /urdf/basis_roboter_urdf/BasisRoboter.urdf')"/>
+    </node>
+
+
+</launch>
