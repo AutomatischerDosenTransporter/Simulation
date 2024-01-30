@@ -121,11 +121,6 @@ namespace Unity.Robotics.UrdfImporter
         {
             string model = BuildAsciiString();
             File.WriteAllText(exportPath, model);
-            try
-            {
-            } catch {
-                
-            }
         }
         
         private string BuildAsciiString()
