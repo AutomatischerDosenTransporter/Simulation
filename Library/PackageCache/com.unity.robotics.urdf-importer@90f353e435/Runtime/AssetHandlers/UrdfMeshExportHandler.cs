@@ -97,7 +97,8 @@ namespace Unity.Robotics.UrdfImporter
             Debug.Log("Did not find an existing STL or DAE file for Geometry Mesh "
                       + geometryObject.name + ". Exporting a new STL file.", geometryObject);
 
-            string newMeshPath = UrdfExportPathHandler.GetNewMeshPath(geometryObject.name + ".stl");
+            string gameObjectName = geometryObject.name.Replace(':','_');
+            string newMeshPath = UrdfExportPathHandler.GetNewMeshPath(gameObjectName + ".stl");
 
             StlExporter stlExporter = new StlExporter(newMeshPath, geometryObject, isCollisionGeometry);
             if (!stlExporter.Export())

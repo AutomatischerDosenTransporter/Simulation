@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<robot name="BasisRoboter">
+  <material name="221,221,13">
+    <color rgba="0.9389 0.9389 0.2503 1" />
+  </material>
+  <material name="178,0,0">
+    <color rgba="0.8532 0 0 1" />
+  </material>
+  <material name="0,0,0_1">
+    <color rgba="0 0 0 1" />
+  </material>
+  <material name="191,191,191">
+    <color rgba="0.8803 0.8803 0.8803 1" />
+  </material>
+  <material name="190,188,186">
+    <color rgba="0.8783 0.8742 0.87 1" />
+  </material>
+  <material name="255,255,255">
+    <texture filename="package://resources/Steelplt.png" />
+  </material>
+  <material name="115,148,64">
+    <color rgba="0.7021 0.786 0.5381 1" />
+  </material>
+  <material name="244,244,244">
+    <color rgba="0.9808 0.9808 0.9808 1" />
+  </material>
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
+  <link name="base_plate">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/Solid1.stl" scale="1 1 1" />
+      </geometry>
+      <material name="221,221,13">
+        <color rgba="0.9389 0.9389 0.2503 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="x">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-4E-06 0.984735 0.060223" />
+      <mass value="1" />
+      <inertia ixx="0.00996196176856756" ixy="0" ixz="0" iyy="0.367328941822052" iyz="0" izz="0.368690192699432" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/MeshFeature1_5.stl" scale="1 1 1" />
+      </geometry>
+      <material name="178,0,0">
+        <color rgba="0.8532 0 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/MeshFeature1_6.stl" scale="1 1 1" />
+      </geometry>
+      <material name="178,0,0">
+        <color rgba="0.8532 0 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/MeshFeature1_7.stl" scale="1 1 1" />
+      </geometry>
+      <material name="0,0,0_1">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/MeshFeature1_8.stl" scale="1 1 1" />
+      </geometry>
+      <material name="178,0,0">
+        <color rgba="0.8532 0 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/MeshFeature1_9.stl" scale="1 1 1" />
+      </geometry>
+      <material name="178,0,0">
+        <color rgba="0.8532 0 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/MeshFeature1_10.stl" scale="1 1 1" />
+      </geometry>
+      <material name="0,0,0_1">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_15.stl" scale="1 1 1" />
+      </geometry>
+      <material name="191,191,191">
+        <color rgba="0.8803 0.8803 0.8803 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_16.stl" scale="1 1 1" />
+      </geometry>
+      <material name="178,0,0">
+        <color rgba="0.8532 0 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_17.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_18.stl" scale="1 1 1" />
+      </geometry>
+      <material name="255,255,255">
+        <texture filename="package://resources/Steelplt.png" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_19.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_20.stl" scale="1 1 1" />
+      </geometry>
+      <material name="255,255,255">
+        <texture filename="package://resources/Steelplt.png" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_21.stl" scale="1 1 1" />
+      </geometry>
+      <material name="178,0,0">
+        <color rgba="0.8532 0 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_22.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_23.stl" scale="1 1 1" />
+      </geometry>
+      <material name="255,255,255">
+        <texture filename="package://resources/Steelplt.png" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_24.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_25.stl" scale="1 1 1" />
+      </geometry>
+      <material name="255,255,255">
+        <texture filename="package://resources/Steelplt.png" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_26.stl" scale="1 1 1" />
+      </geometry>
+      <material name="115,148,64">
+        <color rgba="0.7021 0.786 0.5381 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_27.stl" scale="1 1 1" />
+      </geometry>
+      <material name="115,148,64">
+        <color rgba="0.7021 0.786 0.5381 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_28.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_29.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_30.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_31.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_32.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_33.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_34.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_35.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_36.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_37.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_38.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_39.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_40.stl" scale="1 1 1" />
+      </geometry>
+      <material name="191,191,191">
+        <color rgba="0.8803 0.8803 0.8803 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_41.stl" scale="1 1 1" />
+      </geometry>
+      <material name="178,0,0">
+        <color rgba="0.8532 0 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_42.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_43.stl" scale="1 1 1" />
+      </geometry>
+      <material name="255,255,255">
+        <texture filename="package://resources/Steelplt.png" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_44.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_45.stl" scale="1 1 1" />
+      </geometry>
+      <material name="255,255,255">
+        <texture filename="package://resources/Steelplt.png" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_46.stl" scale="1 1 1" />
+      </geometry>
+      <material name="178,0,0">
+        <color rgba="0.8532 0 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_47.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_49.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_48.stl" scale="1 1 1" />
+      </geometry>
+      <material name="255,255,255">
+        <texture filename="package://resources/Steelplt.png" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_50.stl" scale="1 1 1" />
+      </geometry>
+      <material name="255,255,255">
+        <texture filename="package://resources/Steelplt.png" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_51.stl" scale="1 1 1" />
+      </geometry>
+      <material name="115,148,64">
+        <color rgba="0.7021 0.786 0.5381 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_52.stl" scale="1 1 1" />
+      </geometry>
+      <material name="115,148,64">
+        <color rgba="0.7021 0.786 0.5381 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_53.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_54.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_55.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_56.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_57.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_58.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_59.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_60.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_61.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_62.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_63.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid1_64.stl" scale="1 1 1" />
+      </geometry>
+      <material name="190,188,186">
+        <color rgba="0.8783 0.8742 0.87 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_12.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_13.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_14.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_15.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_16.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_17.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_18.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_19.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_20.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_21.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_22.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_23.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_24.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_25.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_26.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_27.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_28.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_29.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_31.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_30.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_33.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_32.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_34.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_35.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_36.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_37.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_38.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_39.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_40.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_41.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_42.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0.6469 0" />
+      <geometry>
+        <mesh filename="package://meshes/Solid2_43.stl" scale="1 1 1" />
+      </geometry>
+      <material name="244,244,244">
+        <color rgba="0.9808 0.9808 0.9808 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="base_link_base_plate_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="base_plate" />
+  </joint>
+  <joint name="base_plate_x_joint" type="prismatic">
+    <parent link="base_plate" />
+    <child link="x" />
+    <dynamics damping="0.0500000007450581" friction="0.0500000007450581" />
+    <limit lower="0" upper="0" effort="3.40282346638529E+38" velocity="100" />
+  </joint>
+</robot>
