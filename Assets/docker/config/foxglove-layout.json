@@ -43,169 +43,6 @@
       "sidebarDimension": 240,
       "followingViewWidth": 60
     },
-    "3D!b55w73": {
-      "cameraState": {
-        "perspective": true,
-        "distance": 23.327015599929773,
-        "phi": 10.385887541350392,
-        "thetaOffset": -159.01323042999164,
-        "targetOffset": [
-          0.12306809693881655,
-          0.014993308333129734,
-          -1.631435025641835e-16
-        ],
-        "target": [
-          0,
-          0,
-          0
-        ],
-        "targetOrientation": [
-          0,
-          0,
-          0,
-          1
-        ],
-        "fovy": 45,
-        "near": 0.5,
-        "far": 5000
-      },
-      "followMode": "follow-none",
-      "followTf": "odom",
-      "scene": {
-        "transforms": {
-          "showLabel": false,
-          "axisScale": 0.607,
-          "enablePreloading": true
-        }
-      },
-      "transforms": {
-        "frame:odom": {
-          "visible": true
-        },
-        "frame:base_link": {
-          "visible": true
-        },
-        "frame:wheel_right": {
-          "rpyCoefficient": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
-      "topics": {
-        "/lidar": {
-          "visible": true,
-          "colorField": "range",
-          "colorMode": "colormap",
-          "colorMap": "turbo",
-          "pointSize": 2.22,
-          "decayTime": 0
-        },
-        "/robot_description": {
-          "visible": true
-        }
-      },
-      "layers": {
-        "2a1a48b4-3dca-4e2a-b630-b0e651208e70": {
-          "visible": true,
-          "frameLocked": true,
-          "label": "Grid",
-          "instanceId": "2a1a48b4-3dca-4e2a-b630-b0e651208e70",
-          "layerId": "foxglove.Grid",
-          "frameId": "odom",
-          "size": 20,
-          "divisions": 10,
-          "lineWidth": 1,
-          "color": "#248eff",
-          "position": [
-            0,
-            0,
-            0
-          ],
-          "rotation": [
-            0,
-            0,
-            0
-          ],
-          "order": 1
-        }
-      },
-      "publish": {
-        "type": "point",
-        "poseTopic": "/move_base_simple/goal",
-        "pointTopic": "/clicked_point",
-        "poseEstimateTopic": "/initialpose",
-        "poseEstimateXDeviation": 0.5,
-        "poseEstimateYDeviation": 0.5,
-        "poseEstimateThetaDeviation": 0.26179939
-      },
-      "imageMode": {}
-    },
-    "Plot!a5uest": {
-      "paths": [
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/wheel_left_axis.position[:]",
-          "enabled": false
-        },
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/wheel_right_axis.position[:]",
-          "enabled": false
-        },
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/wheel_left_axis.velocity[:]",
-          "enabled": false
-        },
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/wheel_right_axis.velocity[:]",
-          "enabled": false
-        },
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/wheel_left_axis.effort[:]",
-          "enabled": true
-        },
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/wheel_right_axis.effort[:]",
-          "enabled": true
-        }
-      ],
-      "showXAxisLabels": true,
-      "showYAxisLabels": true,
-      "showLegend": true,
-      "legendDisplay": "floating",
-      "showPlotValuesInLegend": false,
-      "isSynced": true,
-      "xAxisVal": "timestamp",
-      "sidebarDimension": 240,
-      "followingViewWidth": 5
-    },
-    "Tab!skyvss": {
-      "activeTabIdx": 3,
-      "tabs": [
-        {
-          "title": "1",
-          "layout": "Plot!2sa8mh9"
-        },
-        {
-          "title": "2",
-          "layout": "3D!b55w73"
-        },
-        {
-          "title": "3",
-          "layout": "Plot!a5uest"
-        },
-        {
-          "title": "4",
-          "layout": "Plot!1zji5mc"
-        }
-      ]
-    },
     "Plot!1zji5mc": {
       "paths": [
         {
@@ -263,6 +100,212 @@
       "xAxisVal": "timestamp",
       "sidebarDimension": 240,
       "followingViewWidth": 10
+    },
+    "Plot!a5uest": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_left_axis.position[:]",
+          "enabled": false
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_right_axis.position[:]",
+          "enabled": false
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_left_axis.velocity[:]",
+          "enabled": false
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_right_axis.velocity[:]",
+          "enabled": false
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_left_axis.effort[:]",
+          "enabled": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/wheel_right_axis.effort[:]",
+          "enabled": true
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "followingViewWidth": 5
+    },
+    "3D!b55w73": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 10.807201753240806,
+        "phi": 58.05144148692959,
+        "thetaOffset": 59.9080353850232,
+        "targetOffset": [
+          3.2012780120397633,
+          -1.7037539136150226,
+          -2.5054200400294584e-16
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-none",
+      "followTf": "odom",
+      "scene": {
+        "transforms": {
+          "showLabel": false,
+          "axisScale": 0.607,
+          "enablePreloading": true
+        }
+      },
+      "transforms": {
+        "frame:odom": {
+          "visible": true
+        },
+        "frame:base_link": {
+          "visible": true
+        },
+        "frame:wheel_right": {
+          "rpyCoefficient": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "topics": {
+        "/lidar": {
+          "visible": true,
+          "colorField": "range",
+          "colorMode": "colormap",
+          "colorMap": "turbo",
+          "pointSize": 2.22,
+          "decayTime": 0
+        },
+        "/robot_description": {
+          "visible": false,
+          "displayMode": "auto"
+        }
+      },
+      "layers": {
+        "2a1a48b4-3dca-4e2a-b630-b0e651208e70": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "2a1a48b4-3dca-4e2a-b630-b0e651208e70",
+          "layerId": "foxglove.Grid",
+          "size": 20,
+          "divisions": 10,
+          "lineWidth": 1,
+          "color": "#248eff",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "order": 1
+        },
+        "14d2c4d1-bd04-4cf5-9339-38dc4b8236f8": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "URDF",
+          "instanceId": "14d2c4d1-bd04-4cf5-9339-38dc4b8236f8",
+          "layerId": "foxglove.Urdf",
+          "sourceType": "topic",
+          "url": "http://localhost/urdf/basis_roboter_urdf/BasisRoboter.urdf",
+          "filePath": "",
+          "parameter": "",
+          "topic": "/basis_roboter/robot_description",
+          "framePrefix": "basis_roboter_",
+          "displayMode": "auto",
+          "fallbackColor": "#ffffff",
+          "order": 2
+        },
+        "7253afe5-224d-4045-94f2-994f72e2020a": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "URDF",
+          "instanceId": "7253afe5-224d-4045-94f2-994f72e2020a",
+          "layerId": "foxglove.Urdf",
+          "sourceType": "topic",
+          "url": "http://localhost/urdf/service_roboter_urdf/ServiceRoboter.urdf",
+          "filePath": "",
+          "parameter": "",
+          "topic": "/service_roboter/robot_description",
+          "framePrefix": "service_roboter_",
+          "displayMode": "auto",
+          "fallbackColor": "#ffffff",
+          "order": 3
+        }
+      },
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {}
+    },
+    "RawMessages!3vrpgh2": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/service_roboter/robot_description"
+    },
+    "Tab!skyvss": {
+      "activeTabIdx": 3,
+      "tabs": [
+        {
+          "title": "1",
+          "layout": "Plot!2sa8mh9"
+        },
+        {
+          "title": "4",
+          "layout": "Plot!1zji5mc"
+        },
+        {
+          "title": "3",
+          "layout": "Plot!a5uest"
+        },
+        {
+          "title": "2",
+          "layout": "3D!b55w73"
+        },
+        {
+          "title": "5",
+          "layout": "RawMessages!3vrpgh2"
+        }
+      ]
     }
   },
   "globalVariables": {

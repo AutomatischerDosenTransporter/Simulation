@@ -2,6 +2,19 @@ version: '3.0'
 
 services:
 
+
+  ros-http-source:
+    image: nginx:alpine
+    container_name: ros-http-source
+    volumes:
+      - ./config/fileserver/default.conf:/etc/nginx/conf.d/default.conf
+      - ./config/fileserver/shared:/usr/share/nginx/html
+      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/usr/share/nginx/html/urdf
+    ports:
+      - 80:80
+    networks:
+      - ros
+
   # ros-listener:
   #   image: registry.nussi.net/ros:foxy-desktop
   #   container_name: ros-listener
@@ -41,8 +54,6 @@ services:
       - 8080:8080
     networks:
       - ros
-    volumes:
-      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
   
 
   ros-foxglove-bridge:
@@ -52,8 +63,6 @@ services:
       - 8765:8765
     networks:
       - ros
-    volumes:
-      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
   
 
   ros-static-transform:
@@ -66,7 +75,7 @@ services:
   ros-service-roboter-state:
     image: registry.nussi.net/ros:foxy-desktop
     container_name: ros-service-roboter-state
-    command: ros2 run robot_state_publisher robot_state_publisher /urdf/service_roboter_urdf/ServiceRoboter.urdf --ros-args --log-level info -p publish_frequency:=50.0
+    command: ros2 launch /config/service_roboter/state.launch.xml
     networks:
       - ros
     volumes:
@@ -83,18 +92,29 @@ services:
       - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
       - ./config:/config
   
-  ros-joint-state:
-    image: registry.nussi.net/ros:foxy-desktop
-    container_name: ros-joint-state
-    command: >
-      /bin/bash -c "apt update -y
-      && apt install ros-foxy-joint-state-publisher -y
-      && ros2 run joint_state_publisher joint_state_publisher --ros-args --log-level info"
-    networks:
-      - ros
-    volumes:
-      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
-      - ./config:/config
+  # ros-basis-joint-state:
+  #   image: registry.nussi.net/ros:foxy-desktop
+  #   container_name: ros-basis-joint-state
+  #   command: >
+  #     /bin/bash -c "apt update -y
+  #     && apt install ros-foxy-joint-state-publisher -y
+  #     && ros2 launch /config/basis_roboter/joint.launch.xml"
+  #   networks:
+  #     - ros
+  #   volumes:
+  #     - ./config:/config
+  
+  # ros-service-joint-state:
+  #   image: registry.nussi.net/ros:foxy-desktop
+  #   container_name: ros-service-joint-state
+  #   command: >
+  #     /bin/bash -c "apt update -y
+  #     && apt install ros-foxy-joint-state-publisher -y
+  #     && ros2 launch /config/service_roboter/joint.launch.xml"
+  #   networks:
+  #     - ros
+  #   volumes:
+  #     - ./config:/config
 
 networks:
   ros:

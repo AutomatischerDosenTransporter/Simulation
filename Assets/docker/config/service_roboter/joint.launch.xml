@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" exec="joint_state_publisher" output="log" respawn="false" respawn_delay="0">
+        
+        <remap from="/joint_states" to="/service_roboter/joint_states"/>
+        <remap from="/service_roboter/robot_description" to="/robot_description"/>
+    </node>
+
+
+</launch>
