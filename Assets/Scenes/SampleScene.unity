@@ -7497,8 +7497,6 @@ GameObject:
   - component: {fileID: 1083546558}
   - component: {fileID: 1083546559}
   - component: {fileID: 1083546560}
-  - component: {fileID: 1083546562}
-  - component: {fileID: 1083546561}
   - component: {fileID: 1083546564}
   - component: {fileID: 1083546563}
   m_Layer: 0
@@ -7593,40 +7591,6 @@ MonoBehaviour:
   centreOfGravityOffset: -1
   leftWheel: {fileID: 1507766970}
   rightWheel: {fileID: 221352159}
---- !u!114 &1083546561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083546555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000b6d20f9a23c14c811302b7eda149f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topicName: /wheel_left_axis
-  jointName: wheel_left_axis_wheel_left_joint
-  wheelTransform: {fileID: 49104909}
-  wheelCollider: {fileID: 221352159}
-  rotationAxis: 0
---- !u!114 &1083546562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083546555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000b6d20f9a23c14c811302b7eda149f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topicName: /wheel_right_axis
-  jointName: wheel_right_axis_wheel_right_joint
-  wheelTransform: {fileID: 1707569094}
-  wheelCollider: {fileID: 1507766970}
-  rotationAxis: 0
 --- !u!114 &1083546563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7634,16 +7598,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083546555}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 000b6d20f9a23c14c811302b7eda149f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topicName: /joint_states
+  topicName: /service_roboter/right_wheel
   jointName: wheel_right_axis_wheel_right_joint
   wheelTransform: {fileID: 1707569094}
   wheelCollider: {fileID: 1507766970}
-  rotationAxis: 0
+  rotationAxis: 2
 --- !u!114 &1083546564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7651,16 +7615,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083546555}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 000b6d20f9a23c14c811302b7eda149f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topicName: /joint_states
+  topicName: /service_roboter/left_wheel
   jointName: wheel_left_axis_wheel_left_joint
   wheelTransform: {fileID: 49104909}
   wheelCollider: {fileID: 221352159}
-  rotationAxis: 0
+  rotationAxis: 2
 --- !u!1 &1084029075
 GameObject:
   m_ObjectHideFlags: 0
@@ -10907,11 +10871,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6115911009153340183, guid: b7315d6b5499c0e4ea5a4ea2643ece6e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6115911009153340183, guid: b7315d6b5499c0e4ea5a4ea2643ece6e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000004816617
+      value: -0.000004816617
       objectReference: {fileID: 0}
     - target: {fileID: 6406296560121524785, guid: b7315d6b5499c0e4ea5a4ea2643ece6e, type: 3}
       propertyPath: m_LocalScale.x

@@ -64,13 +64,12 @@ services:
     networks:
       - ros
   
-
-  ros-static-transform:
-    image: registry.nussi.net/ros:foxy-desktop
-    container_name: ros-static-transform
-    command: ros2 run tf2_ros static_transform_publisher 0 0 0 0.0 0.0 0.0 odom basis_roboter_base_link
-    networks:
-      - ros
+  # ros-static-transform:
+  #   image: registry.nussi.net/ros:foxy-desktop
+  #   container_name: ros-static-transform
+  #   command: ros2 run tf2_ros static_transform_publisher 0 0 0 0.0 0.0 0.0 odom basis_roboter_base_link
+  #   networks:
+  #     - ros
   
   ros-service-roboter-state:
     image: registry.nussi.net/ros:foxy-desktop
@@ -92,29 +91,25 @@ services:
       - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
       - ./config:/config
   
-  # ros-basis-joint-state:
-  #   image: registry.nussi.net/ros:foxy-desktop
-  #   container_name: ros-basis-joint-state
-  #   command: >
-  #     /bin/bash -c "apt update -y
-  #     && apt install ros-foxy-joint-state-publisher -y
-  #     && ros2 launch /config/basis_roboter/joint.launch.xml"
-  #   networks:
-  #     - ros
-  #   volumes:
-  #     - ./config:/config
+  ros-basis-joint-state:
+    image: registry.nussi.net/ros:joint-state
+    container_name: ros-basis-joint-state
+    command: ros2 launch /config/basis_roboter/joint.launch.xml
+    networks:
+      - ros
+    volumes:
+      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
+      - ./config:/config
   
-  # ros-service-joint-state:
-  #   image: registry.nussi.net/ros:foxy-desktop
-  #   container_name: ros-service-joint-state
-  #   command: >
-  #     /bin/bash -c "apt update -y
-  #     && apt install ros-foxy-joint-state-publisher -y
-  #     && ros2 launch /config/service_roboter/joint.launch.xml"
-  #   networks:
-  #     - ros
-  #   volumes:
-  #     - ./config:/config
+  ros-service-joint-state:
+    image: registry.nussi.net/ros:joint-state
+    container_name: ros-service-joint-state
+    command: ros2 launch /config/service_roboter/joint.launch.xml
+    networks:
+      - ros
+    volumes:
+      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
+      - ./config:/config
 
 networks:
   ros:
