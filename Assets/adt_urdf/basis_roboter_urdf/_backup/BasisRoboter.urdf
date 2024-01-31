@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<robot name="BasisRoboter">
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="1.11 1.11 0.025" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.355 0.855 0" />
+      <geometry>
+        <box size="0.4 0.6 0.025" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.505 0.855 0" />
+      <geometry>
+        <box size="0.1 0.6 0.025" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="x">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.048 -0.16 -0.076667" />
+      <geometry>
+        <box size="0.015 0.32 0.23" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="1.157 -0.16 -0.076667" />
+      <geometry>
+        <box size="0.015 0.32 0.23" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="y">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0155 -0.085 -0.2" />
+      <geometry>
+        <cylinder length="0.5" radius="0.0125" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.0155 -0.255 -0.2" />
+      <geometry>
+        <cylinder length="0.5" radius="0.0125" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="1.132 -0.085 -0.2" />
+      <geometry>
+        <cylinder length="0.5" radius="0.0125" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="1.132 -0.255 -0.2" />
+      <geometry>
+        <cylinder length="0.5" radius="0.0125" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.0155 -0.168 0.0753" />
+      <geometry>
+        <box size="0.05 0.2 0.05" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="1.132 -0.168 0.0753" />
+      <geometry>
+        <box size="0.05 0.2 0.05" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="0 1.570796 0" xyz="0.55 -0.25 0.0753" />
+      <geometry>
+        <cylinder length="1.1" radius="0.0125" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="0 1.570796 0" xyz="0.55 -0.09 0.0753" />
+      <geometry>
+        <cylinder length="1.1" radius="0.0125" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="z">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0.085 -0.168 0.0753" />
+      <geometry>
+        <box size="0.15 0.25 0.025" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="base_link_x_joint" type="prismatic">
+    <origin xyz="-0.5545 1.1553 0.0125" />
+    <parent link="base_link" />
+    <child link="x" />
+    <dynamics damping="10" />
+    <limit lower="0" upper="1.5" effort="3.40282346638529E+38" velocity="100" />
+  </joint>
+  <joint name="x_y_joint" type="prismatic">
+    <parent link="x" />
+    <child link="y" />
+    <dynamics damping="10" />
+    <limit lower="0" upper="0" effort="3.40282346638529E+38" velocity="100" />
+  </joint>
+  <joint name="y_z_joint" type="prismatic">
+    <parent link="y" />
+    <child link="z" />
+    <dynamics damping="0.0500000007450581" friction="0.0500000007450581" />
+    <limit lower="0" upper="0" effort="3.40282346638529E+38" velocity="100" />
+  </joint>
+</robot>

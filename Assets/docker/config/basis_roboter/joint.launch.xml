@@ -6,7 +6,7 @@
         <!-- <remap from="/basis_roboter/robot_description" to="/robot_description"/> -->
         <!-- <remap from="/joint_states" to="/basis_roboter/joint_states"/> -->
 
-        <!-- <param name="source_list" value="['/service_roboter/left_wheel','/service_roboter/right_wheel']"/> -->
+        <param name="source_list" value="['/service_roboter/x_axis','/service_roboter/y_axis','/service_roboter/z_axis']"/>
         <param name="rate" value="50.0"/>  
     </node>
 

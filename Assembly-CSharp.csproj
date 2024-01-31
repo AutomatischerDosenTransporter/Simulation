@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\BasisRoboterTransformManager.cs" />
     <Compile Include="Assets\Scripts\VirtualWheelJointState.cs" />
     <Compile Include="Assets\RosMessages\Adt\srv\ObjectPoseServiceRequest.cs" />
+    <Compile Include="Assets\VirtualBasisJointState.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\docker\config\service_roboter\state.launch.xml" />
