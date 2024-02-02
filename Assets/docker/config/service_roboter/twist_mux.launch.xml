@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="service_twist_mux" pkg="twist_mux" exec="twist_mux" output="log" respawn="false" respawn_delay="0" namespace="service_roboter">
+        
+        <param name="topics.navigation.topic"    value="cmd_vel"/>
+        <param name="topics.navigation.timeout"  value="0.5"/>
+        <param name="topics.navigation.priority" value="10"/>
+
+        
+        <param name="topics.joystick.topic"     value="joystick_cmd_vel"/>
+        <param name="topics.joystick.timeout"   value="0.5"/>
+        <param name="topics.joystick.priority"  value="100"/>
+    </node>
+
+
+</launch>

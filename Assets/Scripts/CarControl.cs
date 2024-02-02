@@ -1,9 +1,17 @@
+using RosMessageTypes.Geometry;
+using RosMessageTypes.Sensor;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Robotics.ROSTCPConnector;
 using UnityEngine;
 
 public class CarControl : MonoBehaviour
 {
+    public string topicName = "/cmd_vel";
+    public Mapping vertical;
+    public Mapping horizontal;
+
+
     public float motorTorque = 2000;
     public float brakeTorque = 2000;
     public float maxSpeed = 20;
@@ -16,6 +24,7 @@ public class CarControl : MonoBehaviour
 
 
     Rigidbody rigidBody;
+    ROSConnection ros;
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +33,41 @@ public class CarControl : MonoBehaviour
 
         // Adjust center of mass vertically, to help prevent the car from rolling
         rigidBody.centerOfMass += Vector3.up * centreOfGravityOffset;
+
+
+        ros = ROSConnection.GetOrCreateInstance();
+        ros.Subscribe<TwistMsg>(topicName, OnTwistMsg);
+    }
+
+    private float vInput = 0f;
+    private float hInput = 0f;
+
+    void OnTwistMsg(TwistMsg twist)
+    {
+        switch (vertical)
+        {
+            case Mapping.LinearX: vInput = (float) twist.linear.x; break;
+            case Mapping.LinearY: vInput = (float) twist.linear.y; break;
+            case Mapping.LinearZ: vInput = (float) twist.linear.z; break;
+            case Mapping.AngularX: vInput = (float) twist.angular.x; break;
+            case Mapping.AngularY: vInput = (float) twist.angular.y; break;
+            case Mapping.AngularZ: vInput = (float) twist.angular.z; break;
+        }
+
+        switch (horizontal)
+        {
+            case Mapping.LinearX: hInput = (float)twist.linear.x; break;
+            case Mapping.LinearY: hInput = (float)twist.linear.y; break;
+            case Mapping.LinearZ: hInput = (float)twist.linear.z; break;
+            case Mapping.AngularX: hInput = (float)twist.angular.x; break;
+            case Mapping.AngularY: hInput = (float)twist.angular.y; break;
+            case Mapping.AngularZ: hInput = (float)twist.angular.z; break;
+        }
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
-        float vInput = Input.GetAxis("Vertical");
-        float hInput = Input.GetAxis("Horizontal");
 
         // Calculate current speed in relation to the forward direction of the car
         // (this returns a negative number when traveling backwards)
@@ -69,5 +105,18 @@ public class CarControl : MonoBehaviour
             leftWheel.motorTorque = 0;
             rightWheel.motorTorque = 0;
         }
+    }
+
+
+
+    public enum Mapping
+    {
+        None,
+        LinearX,
+        LinearY,
+        LinearZ,
+        AngularX,
+        AngularY,
+        AngularZ
     }
 }

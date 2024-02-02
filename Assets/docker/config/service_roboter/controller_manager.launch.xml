@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="service_controller_manager" pkg="controller_manager" exec="ros2_control_node" output="log" respawn="false" respawn_delay="0" namespace="service_roboter">
+    
+        <param name="robot_description" value="$(command 'cat /urdf/service_roboter_urdf/ServiceRoboter.urdf')"/>
+    </node>
+
+
+</launch>

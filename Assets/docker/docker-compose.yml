@@ -111,5 +111,34 @@ services:
       - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
       - ./config:/config
 
+  ros-service-twist-mux:
+    image: registry.nussi.net/ros:twist-mux
+    container_name: ros-service-twist-mux
+    command: ros2 launch /config/service_roboter/twist_mux.launch.xml
+    networks:
+      - ros
+    volumes:
+      - ./config:/config
+
+  # ros-service-controller-manager:
+  #   image: registry.nussi.net/ros:control
+  #   container_name: ros-service-controller-manager
+  #   command: ros2 launch /config/service_roboter/controller_manager.launch.xml
+  #   networks:
+  #     - ros
+  #   volumes:
+  #     - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
+  #     - ./config:/config
+
+  ros-service-slam:
+    image: registry.nussi.net/ros:slam
+    container_name: ros-service-slam
+    command: ros2 launch  slam_toolbox online_async_launch.py params_file:=/config/service_roboter/slam.yaml
+    networks:
+      - ros
+    volumes:
+      - ./config:/config
+
+
 networks:
   ros:

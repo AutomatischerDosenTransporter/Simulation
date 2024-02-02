@@ -57,10 +57,12 @@
     <Compile Include="Assets\RosMessages\Adt\srv\PositionServiceResponse.cs" />
     <Compile Include="Assets\Scripts\VirtualIMU.cs" />
     <Compile Include="Assets\Scripts\CarControl.cs" />
+    <Compile Include="Assets\Scripts\VirtualBasisJointState.cs" />
     <Compile Include="Assets\RosMessages\Adt\msg\UnityColorMsg.cs" />
     <Compile Include="Assets\Scripts\TestSubscriber.cs" />
+    <Compile Include="Assets\Scripts\VirtualCmdVel.cs" />
     <Compile Include="Assets\RosMessages\Adt\srv\PositionServiceRequest.cs" />
-    <Compile Include="Assets\MeshCombiner.cs" />
+    <Compile Include="Assets\Scripts\MeshCombiner.cs" />
     <Compile Include="Assets\RosMessages\Adt\srv\ObjectPoseServiceResponse.cs" />
     <Compile Include="Assets\RosMessages\Adt\msg\PosRotMsg.cs" />
     <Compile Include="Assets\Scripts\WheelControl.cs" />
@@ -70,15 +72,17 @@
     <Compile Include="Assets\Scripts\BasisRoboterTransformManager.cs" />
     <Compile Include="Assets\Scripts\VirtualWheelJointState.cs" />
     <Compile Include="Assets\RosMessages\Adt\srv\ObjectPoseServiceRequest.cs" />
-    <Compile Include="Assets\VirtualBasisJointState.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\docker\config\service_roboter\state.launch.xml" />
      <None Include="Assets\adt_msgs\CMakeLists.txt" />
      <None Include="Assets\docker\config\service_roboter\joint.launch.xml" />
      <None Include="Assets\docker\config\basis_roboter\joint.launch.xml" />
+     <None Include="Assets\docker\config\service_roboter\slam.launch.xml" />
+     <None Include="Assets\docker\config\service_roboter\controller_manager.launch.xml" />
      <None Include="Assets\docker\config\basis_roboter\state.launch.xml" />
      <None Include="Assets\adt_msgs\package.xml" />
+     <None Include="Assets\docker\config\service_roboter\twist_mux.launch.xml" />
      <None Include="Assets\Shaders\TileableShader.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Program Files\Unity\2020.2.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

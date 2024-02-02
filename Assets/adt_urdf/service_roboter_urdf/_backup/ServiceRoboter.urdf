@@ -26,6 +26,25 @@
       </geometry>
     </collision>
   </link>
+  <link name="lidar">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.02" />
+      <geometry>
+        <cylinder length="0.04" radius="0.05" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.02" />
+      <geometry>
+        <cylinder length="0.04" radius="0.05" />
+      </geometry>
+    </collision>
+  </link>
   <link name="wheel_base">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0" />
@@ -33,29 +52,51 @@
       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
     </inertial>
   </link>
-  <link name="wheel_right_axis">
+  <link name="wheel_back_axis">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <mass value="1" />
       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
     </inertial>
   </link>
-  <link name="wheel_right">
+  <link name="wheel_back">
     <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0" />
+      <origin rpy="0 0 0" xyz="0 4E-06 3.6E-05" />
       <mass value="1" />
-      <inertia ixx="0.00259254919365048" ixy="0" ixz="0" iyy="0.00491843000054359" iyz="0" izz="0.00259254802949727" />
+      <inertia ixx="0.00369529682211578" ixy="0" ixz="0" iyy="0.00369553361088037" iyz="0" izz="0.00341923860833049" />
     </inertial>
     <visual>
-      <origin rpy="-1.570796 0 0" />
       <geometry>
-        <cylinder length="0.04" radius="0.1" />
+        <sphere radius="0.05" />
       </geometry>
     </visual>
     <collision>
-      <origin rpy="-1.570796 0 0" />
       <geometry>
-        <cylinder length="0.04" radius="0.1" />
+        <sphere radius="0.05" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wheel_front_axis">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
+  <link name="wheel_front">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 4E-06 3.6E-05" />
+      <mass value="1" />
+      <inertia ixx="0.00369529682211578" ixy="0" ixz="0" iyy="0.00369553361088037" iyz="0" izz="0.00341923860833049" />
+    </inertial>
+    <visual>
+      <geometry>
+        <sphere radius="0.05" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.05" />
       </geometry>
     </collision>
   </link>
@@ -85,64 +126,166 @@
       </geometry>
     </collision>
   </link>
-  <link name="wheel_front_axis">
+  <link name="wheel_right_axis">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <mass value="1" />
       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
     </inertial>
   </link>
-  <link name="wheel_front">
+  <link name="wheel_right">
     <inertial>
-      <origin rpy="0 0 0" xyz="0 4E-06 3.6E-05" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
       <mass value="1" />
-      <inertia ixx="0.00369529682211578" ixy="0" ixz="0" iyy="0.00369553361088037" iyz="0" izz="0.00341923860833049" />
+      <inertia ixx="0.00259254919365048" ixy="0" ixz="0" iyy="0.00491843000054359" iyz="0" izz="0.00259254802949727" />
     </inertial>
     <visual>
+      <origin rpy="-1.570796 0 0" />
       <geometry>
-        <sphere radius="0.05" />
+        <cylinder length="0.04" radius="0.1" />
       </geometry>
     </visual>
     <collision>
+      <origin rpy="-1.570796 0 0" />
       <geometry>
-        <sphere radius="0.05" />
+        <cylinder length="0.04" radius="0.1" />
       </geometry>
     </collision>
   </link>
-  <link name="wheel_back_axis">
+  <link name="uss_base">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <mass value="1" />
       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
     </inertial>
   </link>
-  <link name="wheel_back">
+  <link name="uss_front">
     <inertial>
-      <origin rpy="0 0 0" xyz="0 4E-06 3.6E-05" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
       <mass value="1" />
-      <inertia ixx="0.00369529682211578" ixy="0" ixz="0" iyy="0.00369553361088037" iyz="0" izz="0.00341923860833049" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
+  <link name="sensor_front_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
     </inertial>
     <visual>
       <geometry>
-        <sphere radius="0.05" />
+        <box size="0.03 0.03 0.03" />
       </geometry>
     </visual>
-    <collision>
-      <geometry>
-        <sphere radius="0.05" />
-      </geometry>
-    </collision>
   </link>
-  <link name="lidar">
+  <link name="sensor_front_2">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <mass value="1" />
       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0.02" />
       <geometry>
-        <cylinder length="0.04" radius="0.05" />
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_front_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="uss_left">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
+  <link name="sensor_left_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_left_2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_left_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="uss_right">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
+  <link name="sensor_right_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0.28 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_right_2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="sensor_right_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
       </geometry>
     </visual>
   </link>
@@ -150,21 +293,34 @@
     <parent link="base_link" />
     <child link="barrel" />
   </joint>
+  <joint name="barrel_lidar_joint" type="fixed">
+    <origin xyz="0 0 0.9" />
+    <parent link="barrel" />
+    <child link="lidar" />
+  </joint>
   <joint name="barrel_wheel_base_joint" type="fixed">
     <origin xyz="0 0 0.1" />
     <parent link="barrel" />
     <child link="wheel_base" />
   </joint>
-  <joint name="wheel_base_wheel_right_axis_joint" type="fixed">
-    <origin xyz="0 0.2 0" />
+  <joint name="wheel_base_wheel_back_axis_joint" type="fixed">
+    <origin xyz="0 0 -0.04" />
     <parent link="wheel_base" />
-    <child link="wheel_right_axis" />
+    <child link="wheel_back_axis" />
   </joint>
-  <joint name="wheel_right_axis_wheel_right_joint" type="revolute">
-    <parent link="wheel_right_axis" />
-    <child link="wheel_right" />
-    <dynamics damping="0.0500000007450581" friction="0.0500000007450581" />
-    <limit lower="0" upper="0" effort="3.40282346638529E+38" velocity="7" />
+  <joint name="wheel_back_axis_wheel_back_joint" type="fixed">
+    <origin xyz="-0.2 0 0" />
+    <parent link="wheel_back_axis" />
+    <child link="wheel_back" />
+  </joint>
+  <joint name="wheel_base_wheel_front_axis_joint" type="fixed">
+    <origin xyz="0.2 0 -0.04" />
+    <parent link="wheel_base" />
+    <child link="wheel_front_axis" />
+  </joint>
+  <joint name="wheel_front_axis_wheel_front_joint" type="fixed">
+    <parent link="wheel_front_axis" />
+    <child link="wheel_front" />
   </joint>
   <joint name="wheel_base_wheel_left_axis_joint" type="fixed">
     <origin xyz="0 -0.2 0" />
@@ -177,28 +333,78 @@
     <dynamics damping="0.0500000007450581" friction="0.0500000007450581" />
     <limit lower="0" upper="0" effort="3.40282346638529E+38" velocity="7" />
   </joint>
-  <joint name="wheel_base_wheel_front_axis_joint" type="fixed">
-    <origin xyz="0.2 0 0.01" />
+  <joint name="wheel_base_wheel_right_axis_joint" type="fixed">
+    <origin xyz="0 0.2 0" />
     <parent link="wheel_base" />
-    <child link="wheel_front_axis" />
+    <child link="wheel_right_axis" />
   </joint>
-  <joint name="wheel_front_axis_wheel_front_joint" type="fixed">
-    <parent link="wheel_front_axis" />
-    <child link="wheel_front" />
+  <joint name="wheel_right_axis_wheel_right_joint" type="revolute">
+    <parent link="wheel_right_axis" />
+    <child link="wheel_right" />
+    <dynamics damping="0.0500000007450581" friction="0.0500000007450581" />
+    <limit lower="0" upper="0" effort="3.40282346638529E+38" velocity="7" />
   </joint>
-  <joint name="wheel_base_wheel_back_axis_joint" type="fixed">
-    <origin xyz="0 0 0.01" />
-    <parent link="wheel_base" />
-    <child link="wheel_back_axis" />
-  </joint>
-  <joint name="wheel_back_axis_wheel_back_joint" type="fixed">
-    <origin xyz="-0.2 0 0" />
-    <parent link="wheel_back_axis" />
-    <child link="wheel_back" />
-  </joint>
-  <joint name="barrel_lidar_joint" type="fixed">
-    <origin xyz="0 0 0.9" />
+  <joint name="barrel_uss_base_joint" type="fixed">
+    <origin xyz="0 0 0.8" />
     <parent link="barrel" />
-    <child link="lidar" />
+    <child link="uss_base" />
+  </joint>
+  <joint name="uss_base_front_joint" type="fixed">
+    <parent link="uss_base" />
+    <child link="uss_front" />
+  </joint>
+  <joint name="front_sensor_1_joint" type="fixed">
+    <origin xyz="0.28 0 0" />
+    <parent link="uss_front" />
+    <child link="sensor_front_1" />
+  </joint>
+  <joint name="front_sensor_2_joint" type="fixed">
+    <origin xyz="0.28 0 -0.3" />
+    <parent link="uss_front" />
+    <child link="sensor_front_2" />
+  </joint>
+  <joint name="front_sensor_3_joint" type="fixed">
+    <origin xyz="0.28 0 -0.6" />
+    <parent link="uss_front" />
+    <child link="sensor_front_3" />
+  </joint>
+  <joint name="uss_base_left_joint" type="fixed">
+    <origin rpy="0 0 -5.934119" />
+    <parent link="uss_base" />
+    <child link="uss_left" />
+  </joint>
+  <joint name="left_sensor_1_joint" type="fixed">
+    <origin xyz="0.28 0 0" />
+    <parent link="uss_left" />
+    <child link="sensor_left_1" />
+  </joint>
+  <joint name="left_sensor_2_joint" type="fixed">
+    <origin xyz="0.28 0 -0.3" />
+    <parent link="uss_left" />
+    <child link="sensor_left_2" />
+  </joint>
+  <joint name="left_sensor_3_joint" type="fixed">
+    <origin xyz="0.28 0 -0.6" />
+    <parent link="uss_left" />
+    <child link="sensor_left_3" />
+  </joint>
+  <joint name="uss_base_right_joint" type="fixed">
+    <origin rpy="0 0 -0.349066" />
+    <parent link="uss_base" />
+    <child link="uss_right" />
+  </joint>
+  <joint name="right_sensor_1_joint" type="fixed">
+    <parent link="uss_right" />
+    <child link="sensor_right_1" />
+  </joint>
+  <joint name="right_sensor_2_joint" type="fixed">
+    <origin xyz="0.28 0 -0.3" />
+    <parent link="uss_right" />
+    <child link="sensor_right_2" />
+  </joint>
+  <joint name="right_sensor_3_joint" type="fixed">
+    <origin xyz="0.28 0 -0.6" />
+    <parent link="uss_right" />
+    <child link="sensor_right_3" />
   </joint>
 </robot>

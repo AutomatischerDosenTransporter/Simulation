@@ -289,6 +289,13 @@
       </geometry>
     </visual>
   </link>
+  <link name="base_footprint">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
   <joint name="base_link_barrel_joint" type="fixed">
     <parent link="base_link" />
     <child link="barrel" />
@@ -304,7 +311,7 @@
     <child link="wheel_base" />
   </joint>
   <joint name="wheel_base_wheel_back_axis_joint" type="fixed">
-    <origin xyz="0 0 -0.04" />
+    <origin xyz="0 0 -0.045" />
     <parent link="wheel_base" />
     <child link="wheel_back_axis" />
   </joint>
@@ -314,7 +321,7 @@
     <child link="wheel_back" />
   </joint>
   <joint name="wheel_base_wheel_front_axis_joint" type="fixed">
-    <origin xyz="0.2 0 -0.04" />
+    <origin xyz="0.2 0 -0.045" />
     <parent link="wheel_base" />
     <child link="wheel_front_axis" />
   </joint>
@@ -349,62 +356,66 @@
     <parent link="barrel" />
     <child link="uss_base" />
   </joint>
-  <joint name="uss_base_front_joint" type="fixed">
+  <joint name="uss_base_uss_front_joint" type="fixed">
     <parent link="uss_base" />
     <child link="uss_front" />
   </joint>
-  <joint name="front_sensor_1_joint" type="fixed">
+  <joint name="uss_front_sensor_front_1_joint" type="fixed">
     <origin xyz="0.28 0 0" />
     <parent link="uss_front" />
     <child link="sensor_front_1" />
   </joint>
-  <joint name="front_sensor_2_joint" type="fixed">
+  <joint name="uss_front_sensor_front_2_joint" type="fixed">
     <origin xyz="0.28 0 -0.3" />
     <parent link="uss_front" />
     <child link="sensor_front_2" />
   </joint>
-  <joint name="front_sensor_3_joint" type="fixed">
+  <joint name="uss_front_sensor_front_3_joint" type="fixed">
     <origin xyz="0.28 0 -0.6" />
     <parent link="uss_front" />
     <child link="sensor_front_3" />
   </joint>
-  <joint name="uss_base_left_joint" type="fixed">
+  <joint name="uss_base_uss_left_joint" type="fixed">
     <origin rpy="0 0 -5.934119" />
     <parent link="uss_base" />
     <child link="uss_left" />
   </joint>
-  <joint name="left_sensor_1_joint" type="fixed">
+  <joint name="uss_left_sensor_left_1_joint" type="fixed">
     <origin xyz="0.28 0 0" />
     <parent link="uss_left" />
     <child link="sensor_left_1" />
   </joint>
-  <joint name="left_sensor_2_joint" type="fixed">
+  <joint name="uss_left_sensor_left_2_joint" type="fixed">
     <origin xyz="0.28 0 -0.3" />
     <parent link="uss_left" />
     <child link="sensor_left_2" />
   </joint>
-  <joint name="left_sensor_3_joint" type="fixed">
+  <joint name="uss_left_sensor_left_3_joint" type="fixed">
     <origin xyz="0.28 0 -0.6" />
     <parent link="uss_left" />
     <child link="sensor_left_3" />
   </joint>
-  <joint name="uss_base_right_joint" type="fixed">
+  <joint name="uss_base_uss_right_joint" type="fixed">
     <origin rpy="0 0 -0.349066" />
     <parent link="uss_base" />
     <child link="uss_right" />
   </joint>
-  <joint name="right_sensor_1_joint" type="fixed">
+  <joint name="uss_right_sensor_right_1_joint" type="fixed">
     <parent link="uss_right" />
     <child link="sensor_right_1" />
   </joint>
-  <joint name="right_sensor_2_joint" type="fixed">
+  <joint name="uss_right_sensor_right_2_joint" type="fixed">
     <origin xyz="0.28 0 -0.3" />
     <parent link="uss_right" />
     <child link="sensor_right_2" />
   </joint>
-  <joint name="right_sensor_3_joint" type="fixed">
+  <joint name="uss_right_sensor_right_3_joint" type="fixed">
     <origin xyz="0.28 0 -0.6" />
     <parent link="uss_right" />
     <child link="sensor_right_3" />
+  </joint>
+  <joint name="base_link_base_footprint_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="base_footprint" />
   </joint>
 </robot>
