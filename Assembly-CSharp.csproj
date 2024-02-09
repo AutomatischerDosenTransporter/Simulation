@@ -81,6 +81,7 @@
      <None Include="Assets\docker\config\service_roboter\slam.launch.xml" />
      <None Include="Assets\docker\config\service_roboter\controller_manager.launch.xml" />
      <None Include="Assets\docker\config\basis_roboter\state.launch.xml" />
+     <None Include="Assets\docker\config\service_roboter\localization.launch.xml" />
      <None Include="Assets\adt_msgs\package.xml" />
      <None Include="Assets\docker\config\service_roboter\twist_mux.launch.xml" />
      <None Include="Assets\Shaders\TileableShader.shader" />

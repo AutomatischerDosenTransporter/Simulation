@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+
+
+    <node name="service_robot_localization" pkg="robot_localization" exec="ekf_node" output="log" respawn="false" respawn_delay="0" namespace="service_roboter">
+        <remap from="odometry/filtered" to="odom"/>
+        
+        <param name="frequency" value="30.0"/>
+        <param name="two_d_mode" value="true"/>
+        <param name="publish_tf" value="true"/>
+        <param name="map_frame" value="map"/>
+        <param name="odom_frame" value="odom"/>
+        <param name="base_link_frame" value="service_roboter_base_link"/>
+        <param name="world_frame" value="odom"/>
+
+
+        <param name="imu0" value="/service_roboter/lidar"/>
+        <param name="imu0_config" value="
+                              [false, false, false,
+                               false, false, true,
+                               false, false, false,
+                               false, false, true,
+                               true,  false, false]"/>
+        <param name="imu0_differential" value="false"/>
+        
+        
+    </node>
+
+
+</launch>

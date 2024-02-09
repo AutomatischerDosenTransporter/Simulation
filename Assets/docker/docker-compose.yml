@@ -70,31 +70,31 @@ services:
   #   command: ros2 run tf2_ros static_transform_publisher 0 0 0 0.0 0.0 0.0 odom basis_roboter_base_link
   #   networks:
   #     - ros
+
+  # ros-basis-roboter-state:
+  #   image: registry.nussi.net/ros:foxy-desktop
+  #   container_name: ros-basis-roboter-state
+  #   command: ros2 launch /config/basis_roboter/state.launch.xml
+  #   networks:
+  #     - ros
+  #   volumes:
+  #     - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
+  #     - ./config:/config
+  
+  # ros-basis-joint-state:
+  #   image: registry.nussi.net/ros:joint-state
+  #   container_name: ros-basis-joint-state
+  #   command: ros2 launch /config/basis_roboter/joint.launch.xml
+  #   networks:
+  #     - ros
+  #   volumes:
+  #     - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
+  #     - ./config:/config
   
   ros-service-roboter-state:
-    image: registry.nussi.net/ros:foxy-desktop
+    image: registry.nussi.net/ros:robot-state
     container_name: ros-service-roboter-state
     command: ros2 launch /config/service_roboter/state.launch.xml
-    networks:
-      - ros
-    volumes:
-      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
-      - ./config:/config
-
-  ros-basis-roboter-state:
-    image: registry.nussi.net/ros:foxy-desktop
-    container_name: ros-basis-roboter-state
-    command: ros2 launch /config/basis_roboter/state.launch.xml
-    networks:
-      - ros
-    volumes:
-      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
-      - ./config:/config
-  
-  ros-basis-joint-state:
-    image: registry.nussi.net/ros:joint-state
-    container_name: ros-basis-joint-state
-    command: ros2 launch /config/basis_roboter/joint.launch.xml
     networks:
       - ros
     volumes:
@@ -120,24 +120,34 @@ services:
     volumes:
       - ./config:/config
 
-  # ros-service-controller-manager:
-  #   image: registry.nussi.net/ros:control
-  #   container_name: ros-service-controller-manager
-  #   command: ros2 launch /config/service_roboter/controller_manager.launch.xml
-  #   networks:
-  #     - ros
-  #   volumes:
-  #     - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
-  #     - ./config:/config
-
-  ros-service-slam:
-    image: registry.nussi.net/ros:slam
-    container_name: ros-service-slam
-    command: ros2 launch  slam_toolbox online_async_launch.py params_file:=/config/service_roboter/slam.yaml
+  ros-service-controller-manager:
+    image: registry.nussi.net/ros:control
+    container_name: ros-service-controller-manager
+    command: ros2 launch /config/service_roboter/controller_manager.launch.py
     networks:
       - ros
     volumes:
+      - C:\\Users\\danie\\Nextcloud\\Huhan\\Unity\\ADT-Survival\\Assets\\adt_urdf:/urdf
       - ./config:/config
+
+
+  # ros-service-slam:
+  #   image: registry.nussi.net/ros:slam
+  #   container_name: ros-service-slam
+  #   command: ros2 launch  slam_toolbox online_async_launch.py params_file:=/config/service_roboter/slam.yaml
+  #   networks:
+  #     - ros
+  #   volumes:
+  #     - ./config:/config
+  
+  # ros-service-localization:
+  #   image: registry.nussi.net/ros:localization
+  #   container_name: ros-service-localization
+  #   command: ros2 launch /config/service_roboter/localization.launch.xml
+  #   networks:
+  #     - ros
+  #   volumes:
+  #     - ./config:/config
 
 
 networks:

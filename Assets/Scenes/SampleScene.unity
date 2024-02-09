@@ -8154,7 +8154,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083546555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2fb184a0972e884e8d0f01958275640, type: 3}
   m_Name: 
@@ -8175,8 +8175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1378f3e634ff7429595f53e0d71ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topicName: /imu
-  transformName: imu
+  topicName: /service_roboter/imu
+  transformName: service_roboter_imu
   rigidbody: {fileID: 1083546556}
 --- !u!114 &1083546560
 MonoBehaviour:
@@ -8213,7 +8213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf264685cd9a5654298ef342bfdde494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topicName: /service_roboter/joystick_cmd_vel
+  topicName: /service_roboter_diff_cont/cmd_vel_unstamped
   vertical: 1
   horizontal: 6
   timeout: 1

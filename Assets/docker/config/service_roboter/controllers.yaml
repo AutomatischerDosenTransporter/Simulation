@@ -1,0 +1,36 @@
+service_roboter:
+  controller_manager:
+    ros__parameters:
+      update_rate: 30
+      # use_sim_time: true
+
+      service_roboter_diff_cont:
+        type: diff_drive_controller/DiffDriveController
+
+      service_roboter_joint_broad:
+        type: joint_state_broadcaster/JointStateBroadcaster
+
+  # https://control.ros.org/master/doc/ros2_controllers/diff_drive_controller/doc/userdoc.html
+
+  service_roboter_diff_cont:
+    ros__parameters:
+
+      publish_rate: 50.0
+
+      base_frame_id: service_roboter_base_link
+      odom_frame_id: odom
+
+      left_wheel_names: ['wheel_left_axis_wheel_left_joint']
+      right_wheel_names: ['wheel_right_axis_wheel_right_joint']
+      wheel_separation: 0.297
+      wheel_radius: 0.033
+
+      use_stamped_vel: false
+      position_feedback: true
+      open_loop: false
+      
+
+
+  service_roboter_joint_broad:
+    ros__parameters:
+      use_local_topics: true

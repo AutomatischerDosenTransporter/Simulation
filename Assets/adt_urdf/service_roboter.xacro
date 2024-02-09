@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="service_roboter">
+    
+    <xacro:include filename="./service_roboter_urdf/ServiceRoboter.urdf"/>
+    <xacro:include filename="service_roboter_control.xacro"/>
+
+</robot>

@@ -10,7 +10,8 @@
 
         <param name="publish_frequency" value="50.0"/>
         <param name="frame_prefix" value="service_roboter_"/>
-        <param name="robot_description" value="$(command 'cat /urdf/service_roboter_urdf/ServiceRoboter.urdf')"/>
+        <param name="robot_description" value="$(command 'xacro /urdf/service_roboter.xacro use_ros2_control:=true')"/>
+        
     </node>
 
 
